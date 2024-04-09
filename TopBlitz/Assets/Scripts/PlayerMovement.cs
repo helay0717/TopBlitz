@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// RequireComponent : 해당 컴포넌트를 자동으로 추가
+[RequireComponent (typeof(GunController))]
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // 이동속도 변경 필요 시 값 변경하기
 
     Rigidbody rb;
     Camera mainCamera;
+    GunController gunController;
 
     void Start()
     {
@@ -15,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         // 중력 제거
         rb.useGravity = false;
         mainCamera = Camera.main;
+        gunController = GetComponent<GunController>();
     }
 
     void Update()
@@ -43,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
                 Quaternion rotation = Quaternion.LookRotation(lookDirection);
                 rb.MoveRotation(rotation);
             }
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            gunController.Shoot();
         }
     }
 }
