@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 38
+  controlID: 91
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,9 +313,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c8590000
-      m_LastClickedID: 0
-      m_ExpandedIDs: c2daffff54eaffffbaebffff16f5ffff1cf5ffff30fbffff70590000
+      m_SelectedIDs: a8590000
+      m_LastClickedID: 22952
+      m_ExpandedIDs: a8faffffbc590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -769,13 +769,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10513936, y: -0.7896253, z: 0.14124139, w: 0.58778507}
+    m_Target: {x: 0.3801945, y: -0.42907357, z: 0.20568106, w: 0.7931275}
     speed: 2
-    m_Value: {x: 0.10623429, y: -0.7885291, z: 0.14226627, w: 0.5888094}
+    m_Value: {x: 0.380193, y: -0.42907187, z: 0.20568025, w: 0.7931244}
   m_Size:
-    m_Target: 4.0237703
+    m_Target: 12.383782
     speed: 2
-    m_Value: 3.8504977
+    m_Value: 12.383782
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -860,9 +860,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2590000
-    m_LastClickedID: 22962
-    m_ExpandedIDs: 00000000aa59000000ca9a3b
+    m_SelectedIDs: 341e0000
+    m_LastClickedID: 7732
+    m_ExpandedIDs: 000000001a5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -890,7 +890,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa590000
+    m_ExpandedIDs: 000000001a5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
