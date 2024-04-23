@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   revolver: {fileID: 983028849}
   shotgun: {fileID: 752157899}
-  assaultRifle: {fileID: 0}
+  assaultRifle: {fileID: 612180766}
 --- !u!1 &2106923219
 GameObject:
   m_ObjectHideFlags: 0

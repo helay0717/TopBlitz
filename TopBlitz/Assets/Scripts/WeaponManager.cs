@@ -19,7 +19,7 @@ public class WeaponManager : MonoBehaviour
     void Update()
     {
         // 마우스 왼쪽 버튼을 눌렀을 때 발사합니다.
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Fire();
         }

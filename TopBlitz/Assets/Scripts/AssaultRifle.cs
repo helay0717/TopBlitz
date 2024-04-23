@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AssaultRifle : Weapon
 {
-    public float fireRate = 10f; // 초당 발사 횟수
+    public float fireRate = 5f; // 초당 발사 횟수
     private float fireInterval; // 발사 간격
     private float lastFireTime; // 마지막으로 발사한 시간
 
