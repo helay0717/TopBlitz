@@ -2,45 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class AssaultRifle : Weapon
 {
-    public float fireRate = 5f; // 초당 발사 횟수
-    private float fireInterval; // 발사 간격
-    private float lastFireTime; // 마지막으로 발사한 시간
+    // 총알 간의 간격 조절을 위한 변수
+    public float bulletSpreadAngle = 5f;
+    // 각 총알 사이의 딜레이
+    public float shotDelay = 0.1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // 발사 간격을 계산합니다 (초당 발사 횟수에 따라).
-        fireInterval = 1f / fireRate;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // 플레이어가 마우스 좌클릭을 꾹 누르고 있는지 확인합니다.
-        if (Input.GetMouseButton(0) && Time.time > lastFireTime + fireInterval && CanFire())
-        {
-            Fire();
-        }
-    }
+    private bool isFiring = false; // 현재 발사 중인지 여부를 나타내는 플래그
 
     public override void Fire()
     {
+        if (!isFiring) // 현재 발사 중이 아니라면 발사 가능
+        {
+            isFiring = true;
+            StartCoroutine(FireBurst());
+        }
+    }
+
+    IEnumerator FireBurst()
+    {
         Vector3 fireDirection = transform.forward;
 
-        if (projectilePrefab != null && firePoint != null)
+        for (int i = 0; i < 3; i++)
         {
-            // 발사체 프리팹을 인스턴스화하여 발사 위치에 생성합니다.
-            GameObject bulletInstance = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(fireDirection));
+            Vector3 spread = Quaternion.Euler(0, Random.Range(-bulletSpreadAngle, bulletSpreadAngle), 0) * fireDirection;
 
-            // 발사체의 Bullet 스크립트로 속도 및 방향을 설정합니다.
-            // 이 스크립트의 SetVelocity 메서드가 이전에 정의되어 있어야 합니다.
-            AssaultRifleBullet bulletScript = bulletInstance.GetComponent<AssaultRifleBullet>();
-            if (bulletScript != null)
-            {
-                bulletScript.SetVelocity(fireDirection);
-            }
+            // 총알 발사
+            FireBullet(spread);
+
+            yield return new WaitForSeconds(shotDelay);
+        }
+
+        isFiring = false; // 발사가 끝났음을 나타냄
+        UpdateFireTime(); // 다음 발사 가능 시간 업데이트
+    }
+
+    void FireBullet(Vector3 direction)
+    {
+        // 발사체 프리팹을 인스턴스화하여 발사 위치에 생성합니다.
+        GameObject bulletInstance = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
+
+        // 발사체의 Bullet 스크립트로 속도 및 방향을 설정합니다.
+        // 이 스크립트의 SetVelocity 메서드가 이전에 정의되어 있어야 합니다.
+        AssaultRifleBullet bulletScript = bulletInstance.GetComponent<AssaultRifleBullet>();
+        if (bulletScript != null)
+        {
+            bulletScript.SetVelocity(direction);
         }
     }
 }

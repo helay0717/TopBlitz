@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 700.0f;
+    private GameObject playerHpBar;
+
+    private void Start()
+    {
+        playerHpBar = GameObject.Find("Canvas/Slider");
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
         transform.Translate(movement * movementSpeed * Time.deltaTime, Space.World);
+        playerHpBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, -0.9f));
     }
 
     private void RotatePlayer()

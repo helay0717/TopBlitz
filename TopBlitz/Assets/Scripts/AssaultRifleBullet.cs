@@ -5,8 +5,8 @@ using UnityEngine;
 public class AssaultRifleBullet : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 10f;
-    public int damage = 10;
+    public float speed = 12f;
+    public int damage = 8;
     private Rigidbody rb;
 
     void Awake()
