@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-C:\Users\hunjun\Desktop\Main\TopBlitz
-=======
-C:\Users\ASUS\Desktop\전공종합설계PBL2 폴더\PBL\TopBlitz
->>>>>>> gun
+C:\Users\hunjun\PBL\TopBlitz

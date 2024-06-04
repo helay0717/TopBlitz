@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // 이동속도 변경 필요 시 값 변경하기
-
     public int characterID; // 각 캐릭터의 고유한 식별자
 
     Rigidbody rb;
@@ -67,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isMoving",false);
+            animator.SetBool("isMoving", false);
         }
     }
 }

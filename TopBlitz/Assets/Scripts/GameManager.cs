@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 인스턴스
+    public int currentCharacterID; // 현재 제어 중인 캐릭터의 ID
+    public CameraFollow cameraFollow; // CameraFollow 스크립트 참조
 
-    public int currentCharacterID = 1; // 현재 제어 중인 캐릭터의 ID
-
-    private void Awake()
+    void Awake()
     {
-        // 싱글톤 인스턴스 설정
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // 게임 매니저 오브젝트를 유지
         }
         else
         {
@@ -21,9 +19,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 캐릭터를 변경하는 메서드
-    public void ChangeCharacter(int newCharacterID)
+    public void ChangeCharacter(int characterID)
     {
-        currentCharacterID = newCharacterID;
+        currentCharacterID = characterID;
+        Character[] characters = FindObjectsOfType<Character>();
+        foreach (Character character in characters)
+        {
+            if (character.characterID == characterID)
+            {
+                cameraFollow.SetTarget(character.transform);
+                break;
+            }
+        }
     }
 }

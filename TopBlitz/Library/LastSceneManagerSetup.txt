@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PlayerMovementScene.unity
-=======
-- path: Assets/Scenes/MapScene.unity
->>>>>>> gun
+- path: Assets/Scenes/PlayerNum.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

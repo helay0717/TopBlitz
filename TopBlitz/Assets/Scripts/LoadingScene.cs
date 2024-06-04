@@ -11,7 +11,7 @@ public class LoadingScene : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return null;
-        AsyncOperation op = SceneManager.LoadSceneAsync("MapScene"); //Scene ÀÌ¸§À» ¹Ù²ã¾ßÇÔ; ¸ÊÀ» ºÒ·¯¿À´Â È­¸éÀ¸·Î
+        AsyncOperation op = SceneManager.LoadSceneAsync("PlayerMovementScene"); //Scene ì´ë¦„ì„ ë°”ê¿”ì•¼í•¨; ë§µì„ ë¶ˆëŸ¬ì˜¤ëŠ” í™”ë©´ìœ¼ë¡œ
         op.allowSceneActivation = false;
 
         while (!op.isDone)
