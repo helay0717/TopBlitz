@@ -23,9 +23,9 @@ public class AssaultRifleBullet : MonoBehaviour
         }
     }
 
-    /*    void OnTriggerEnter(Collider other)
-        {
-            // TODO: 충돌 처리 로직
-            Destroy(gameObject);
-        }*/
+    void OnTriggerEnter(Collider other)
+    {
+        // TODO: 충돌 처리 로직
+        Destroy(gameObject);
+    }
 }

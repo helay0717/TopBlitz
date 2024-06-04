@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,11 +8,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 700.0f;
+    public float playerHp = 200.0f;
     private GameObject playerHpBar;
 
     private void Start()
     {
-        playerHpBar = GameObject.Find("Canvas/Slider");
+        playerHpBar = GameObject.Find("Canvas/PlayerHpBar");
     }
 
     // Update is called once per frame

@@ -23,9 +23,15 @@ public class ShotgunBullet : MonoBehaviour
         }
     }
 
-  /*  void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         // TODO: 충돌 처리 로직
+        DummyLogic dummy = other.GetComponent<DummyLogic>();
+        if (dummy != null)
+        {
+            dummy.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
-    }*/
+    }
 }
