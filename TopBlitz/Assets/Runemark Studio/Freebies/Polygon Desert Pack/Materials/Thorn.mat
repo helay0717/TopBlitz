@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - _ALPHABLEND_ON
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_InvalidKeywords: []
   m_LightmapFlags: 5
 =======
@@ -21,6 +22,11 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 1
 >>>>>>> gun
+=======
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+>>>>>>> Joon
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -74,21 +80,32 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _Glossiness: 0
 =======
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
 >>>>>>> gun
+=======
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+>>>>>>> Joon
     - _Metallic: 0
     - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
 >>>>>>> gun
+=======
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+>>>>>>> Joon
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 0

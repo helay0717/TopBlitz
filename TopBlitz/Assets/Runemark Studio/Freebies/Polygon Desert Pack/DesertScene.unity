@@ -99,10 +99,14 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LightingSettings: {fileID: 4890085278179872738, guid: a1552f42b0193964c99736ceaddf7174, type: 2}
 =======
   m_LightingSettings: {fileID: 4890085278179872738, guid: e5724e6fa9b35e346bdaa9f7fa8b5e78, type: 2}
 >>>>>>> gun
+=======
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e5724e6fa9b35e346bdaa9f7fa8b5e78, type: 2}
+>>>>>>> Joon
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
