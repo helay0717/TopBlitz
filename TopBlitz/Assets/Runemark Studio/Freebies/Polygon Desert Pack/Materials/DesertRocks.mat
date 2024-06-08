@@ -12,21 +12,15 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 5
 =======
-=======
->>>>>>> Joon
   m_ValidKeywords:
   - _EMISSION
   m_InvalidKeywords: []
   m_LightmapFlags: 1
-<<<<<<< HEAD
 >>>>>>> gun
-=======
->>>>>>> Joon
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -79,32 +73,21 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
 <<<<<<< HEAD
-<<<<<<< HEAD
     - _Glossiness: 0
 =======
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
 >>>>>>> gun
-=======
-    - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 1
->>>>>>> Joon
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
 >>>>>>> gun
-=======
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
->>>>>>> Joon
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

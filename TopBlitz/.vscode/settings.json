@@ -2,13 +2,9 @@
     "files.exclude": {
         "**/.DS_Store": true,
         "**/.git": true,
-<<<<<<< HEAD
         "**/.vs": true,
         "**/.gitmodules": true,
         "**/.vsconfig": true,
-=======
-        "**/.gitmodules": true,
->>>>>>> Joon
         "**/*.booproj": true,
         "**/*.pidb": true,
         "**/*.suo": true,
@@ -53,14 +49,10 @@
         "library/": true,
         "obj/": true,
         "Obj/": true,
-<<<<<<< HEAD
         "Logs/": true,
         "logs/": true,
         "ProjectSettings/": true,
         "UserSettings/": true,
-=======
-        "ProjectSettings/": true,
->>>>>>> Joon
         "temp/": true,
         "Temp/": true
     },
