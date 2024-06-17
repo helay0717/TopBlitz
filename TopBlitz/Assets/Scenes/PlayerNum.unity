@@ -649,6 +649,7 @@ GameObject:
   - component: {fileID: 832315969}
   - component: {fileID: 832315968}
   - component: {fileID: 832315967}
+  - component: {fileID: 832315970}
   m_Layer: 5
   m_Name: OneVSOne
   m_TagString: Untagged
@@ -720,9 +721,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141978230}
-        m_TargetAssemblyTypeName: main, Assembly-CSharp
-        m_MethodName: onClickGameStart
+      - m_Target: {fileID: 832315970}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: On1vs1ButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -770,6 +771,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832315965}
   m_CullTransparentMesh: 1
+--- !u!114 &832315970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832315965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d168c835c7c7944be0f9044dce0a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836121898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1292,7 @@ GameObject:
   - component: {fileID: 1725060964}
   - component: {fileID: 1725060963}
   - component: {fileID: 1725060962}
+  - component: {fileID: 1725060965}
   m_Layer: 5
   m_Name: ThreeVSThree
   m_TagString: Untagged
@@ -1350,9 +1364,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141978230}
-        m_TargetAssemblyTypeName: main, Assembly-CSharp
-        m_MethodName: onClickGameStart
+      - m_Target: {fileID: 1725060965}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: On3vs3ButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1400,6 +1414,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725060960}
   m_CullTransparentMesh: 1
+--- !u!114 &1725060965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725060960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d168c835c7c7944be0f9044dce0a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762018878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,6 +1572,7 @@ GameObject:
   - component: {fileID: 2079274579}
   - component: {fileID: 2079274578}
   - component: {fileID: 2079274577}
+  - component: {fileID: 2079274580}
   m_Layer: 5
   m_Name: FiveVSFive
   m_TagString: Untagged
@@ -1617,9 +1644,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141978230}
-        m_TargetAssemblyTypeName: main, Assembly-CSharp
-        m_MethodName: onClickGameStart
+      - m_Target: {fileID: 2079274580}
+        m_TargetAssemblyTypeName: LobbyUI, Assembly-CSharp
+        m_MethodName: On5vs5ButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1667,6 +1694,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079274575}
   m_CullTransparentMesh: 1
+--- !u!114 &2079274580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079274575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d168c835c7c7944be0f9044dce0a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

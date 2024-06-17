@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DummyLogic : MonoBehaviour
 {
     public float maxHealth = 500;
-    private float currentHealth;
+    public float currentHealth;
     public Slider healthBar; // 체력바 UI
 
     void Start()

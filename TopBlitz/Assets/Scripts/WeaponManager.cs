@@ -6,17 +6,18 @@ using UnityEngine.EventSystems;
 public class WeaponManager : MonoBehaviour
 {
     public GameObject revolver; // 리볼버 게임 오브젝트
-    public GameObject shotgun; // 샷건 게임 오브젝트
     public GameObject assaultRifle; // 돌격소총 게임 오브젝트
     public GameObject sniper;
+    public GameObject shotgun; // 샷건 게임 오브젝트
     // 추후 다른 무기에 대한 참조를 추가할 수 있습니다.
 
     private GameObject activeWeapon; // 현재 활성화된 무기
 
     void Start()
     {
-
+        // 초기화 코드는 여기에 추가할 수 있습니다.
     }
+
     void Update()
     {
         // 마우스 왼쪽 버튼을 눌렀을 때 발사합니다.
@@ -54,19 +55,29 @@ public class WeaponManager : MonoBehaviour
         // 현재 활성화된 무기가 있다면 그 무기의 Fire 메서드를 호출합니다.
         if (activeWeapon != null)
         {
-            activeWeapon.GetComponentInChildren<Weapon>().Fire();
+            activeWeapon.GetComponentInChildren<Weapon>()?.Fire();
         }
     }
 
     // 무기를 활성화하는 메서드
     public void ActivateWeapon(GameObject weapon)
     {
+        // 현재 활성화된 무기와 새로운 무기가 같은 경우 처리를 생략합니다.
+        if (activeWeapon == weapon)
+            return;
+
+        // 이전에 활성화된 무기를 비활성화합니다.
         if (activeWeapon != null)
         {
             activeWeapon.SetActive(false);
         }
 
+        // 새로운 무기를 활성화합니다.
         activeWeapon = weapon;
-        activeWeapon.SetActive(true);
+
+        if (activeWeapon != null)
+        {
+            activeWeapon.SetActive(true);
+        }
     }
 }

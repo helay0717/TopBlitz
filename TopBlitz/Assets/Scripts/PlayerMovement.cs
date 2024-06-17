@@ -26,8 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // PlayerPrefs에서 선택된 캐릭터의 ID를 가져옴
+        int selectedCharacterID = PlayerPrefs.GetInt("SelectedCharacterID", 0);
+
         // 현재 캐릭터의 ID와 입력한 ID가 같으면 해당 캐릭터를 제어
-        if (GameManager.instance.currentCharacterID == characterID)
+        if (selectedCharacterID == characterID)
         {
             // 플레이어로부터 입력받기 (WASD)
             float horizontalInput = Input.GetAxisRaw("Horizontal");
