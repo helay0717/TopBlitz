@@ -393,6 +393,7 @@
 "Assets/Scripts/DummyLogic.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameStart.cs"
+"Assets/Scripts/HealthBar.cs"
 "Assets/Scripts/LoadingScene.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MatchEnd.cs"

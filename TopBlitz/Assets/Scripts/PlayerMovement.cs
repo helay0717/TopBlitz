@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // 이동속도 변경 필요 시 값 변경하기
     public int characterID; // 각 캐릭터의 고유한 식별자
+    public float maxHealth = 200;
+    private float currentHealth;
+    public Slider healthBar; // 체력바 UI
 
     Rigidbody rb;
     Camera mainCamera;
@@ -22,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
         // Animator 컴포넌트 가져오기
         animator = GetComponent<Animator>();
+
+        currentHealth = maxHealth;
+        UpdateHealthBar();
     }
 
     void Update()
@@ -67,6 +74,29 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", false);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+        UpdateHealthBar();
+
+        if (currentHealth == 0)
+        {
+            Destroy(gameObject); // 체력이 0이 되면 더미를 파괴
+        }
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.value = (float)currentHealth / maxHealth;
         }
     }
 }

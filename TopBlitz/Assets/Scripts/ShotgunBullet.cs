@@ -26,7 +26,7 @@ public class ShotgunBullet : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // TODO: 충돌 처리 로직
-        DummyLogic dummy = other.GetComponent<DummyLogic>();
+        PlayerMovement dummy = other.GetComponent<PlayerMovement>();
         if (dummy != null)
         {
             dummy.TakeDamage(damage);

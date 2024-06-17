@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -63,10 +64,16 @@ public class WeaponManager : MonoBehaviour
     {
         if (activeWeapon != null)
         {
-            activeWeapon.SetActive(false);
+            Destroy(activeWeapon);
         }
 
         activeWeapon = weapon;
         activeWeapon.SetActive(true);
+    }
+
+    // UI 요소 위에 있는지 확인하는 메서드
+    bool IsPointerOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
     }
 }
